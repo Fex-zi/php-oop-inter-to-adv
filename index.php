@@ -167,3 +167,4 @@ $paymentDisplay = match ($paymentStat) {
 };
 
 echo "</br>" . $paymentDisplay;
+//declare(strict_types=1); // needs to be applied to all files because it doesn't inlude
