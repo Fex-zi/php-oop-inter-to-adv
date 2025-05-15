@@ -168,3 +168,75 @@ $paymentDisplay = match ($paymentStat) {
 
 echo "</br>" . $paymentDisplay;
 //declare(strict_types=1); // needs to be applied to all files because it doesn't inlude
+
+//require_once ''; //is better
+
+echo "</br>";
+
+
+function foo(): mixed
+{
+    return 1;
+}
+
+var_dump(foo());
+
+function foo2(int|float $x, int|float $y): int|float|string //i added string cuz of the '<br>'
+{
+    return '<br>' . $x * $y;
+}
+
+echo foo2(5, 4);
+
+// to pass as many arguments as you want
+function sum(...$numbers): int|float|string //i added string cuz of the '<br>'
+{
+    //var_dump(...$numbers);
+    return '<br>' . array_sum($numbers);
+}
+
+echo sum(5, 4, 0, 33, 4, 5, 2);
+
+$jj = [0, 33, 4, 5, 2];
+echo sum(5, 4, ...$jj);
+
+$xx = 4;
+$yy = 3;
+
+echo "</br>";
+var_dump(sum(xx: $yy, yy: $xx));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//data types 
+$heredoc = <<<TEXT
+<br>
+you can use int|float|array or mixed if you aren't sure of the data types
+// to pass as many arguments as you want
+function sum(...parameter): int|float|string //i added string cuz of the '<br>'
+{
+    return '<br>' . array_sum(parameter);
+}
+
+echo sum(5, 4, 0, 33, 4, 5, 2);
+<br>
+TEXT;
+
+echo $heredoc;
