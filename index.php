@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+error_reporting(E_ALL); // & ~E_WARNING
 /*
 
 $x = ceil((0.1 + 0.2) * 10); // rounds up while floor doesn't
@@ -189,7 +190,7 @@ function foo2(int|float $x, int|float $y): int|float|string //i added string cuz
 echo foo2(5, 4);
 
 // to pass as many arguments as you want
-function sum(...$numbers): int|float|string //i added string cuz of the '<br>'
+function sum(mixed ...$numbers): int|float|string //i added string cuz of the '<br>'
 {
     //var_dump(...$numbers);
     return '<br>' . array_sum($numbers);
@@ -206,9 +207,56 @@ $yy = 3;
 echo "</br>";
 var_dump(sum(xx: $yy, yy: $xx));
 
+echo "</br>";
+$xg = 4;
+$sum2 = function (int|float ...$numbers) use (&$xg): int|float //you can use "use" to import variable only for function declarations and "&" changes the global scope of a vraiable uptop too 
+{
+    //var_dump(...$numbers);
+    echo $xg = 15;
+    return  array_sum($numbers);
+};
+
+echo "-The sum with use func is:" . $sum2(4, 2) . "and the xg variable is $xg <br>";
 
 
+$array = [1, 2, 3, 4];
 
+$y = 4;
+$array2 = array_map(fn($number) => $number * $number + $y, $array); // arrow only works for single line expression
+
+print_r($array2) . "array_map";
+echo "</br></br>";
+
+// date and time
+$currentTime = time();
+
+echo $currentTime + 5 * 24 * 60 * 60 . '<br>';
+
+echo date('m/d/Y g:ia') . '<br>'; // the timezone is trash
+
+date_default_timezone_set('America/Denver'); //now i'm setting my default time zone
+
+echo date('m/d/Y g:ia') . '<br>'; // now the timezone chnges to mine
+
+echo date_default_timezone_get();
+
+$invoiceItems = [
+    ['price' => 9.99, 'qty' => 3, 'desc' => 'Item 1'],
+    ['price' => 29.99, 'qty' => 1, 'desc' => 'Item 2'],
+    ['price' => 149, 'qty' => 1, 'desc' => 'Item 3'],
+    ['price' => 14.99, 'qty' => 2, 'desc' => 'Item 4'],
+    ['price' => 4.99, 'qty' => 4, 'desc' => 'Item 5'],
+];
+
+$total = array_reduce($invoiceItems, fn($sum, $item) => $sum + $item['qty'] * $item['price']);
+
+echo "<br><br>" . $total;
+
+//array_combine($array1, $array2);, array_filter(), array_map(), array_merge(, array_reduce(), array_search() or in_array(), array_diff() or _assoc(), asort(), usort(), ksort() by key, 
+
+//error_handling
+
+//function errorHandler(int $type, string $msg, ?string $file = null, ?int $line = null) {}
 
 
 
@@ -227,7 +275,7 @@ var_dump(sum(xx: $yy, yy: $xx));
 
 //data types 
 $heredoc = <<<TEXT
-<br>
+<br><br>
 you can use int|float|array or mixed if you aren't sure of the data types
 // to pass as many arguments as you want
 function sum(...parameter): int|float|string //i added string cuz of the '<br>'
@@ -236,6 +284,15 @@ function sum(...parameter): int|float|string //i added string cuz of the '<br>'
 }
 
 echo sum(5, 4, 0, 33, 4, 5, 2);
+
+you can use "use" to import variable only for function declarations "&" changes the global scope of a vraiable too 
+
+sleep(5);
+
+ini_get()
+ini_set()
+
+array_combine(array1, array2);, array_filter(), array_map(), array_merge(, array_reduce(), array_search() or in_array(), array_diff() or _assoc(), asort(), usort(), ksort() by key
 <br>
 TEXT;
 
