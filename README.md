@@ -11,3 +11,10 @@ https://www.youtube.com/watch?v=sVbEyFZKgqk&list=PLr3d3QYzkw2xabQRUpcZ_IBk9W50M9
 #### Docker Tutorial
 
 https://www.youtube.com/watch?v=31ieHmcTUOk&list=PL4cUxeGkcC9hxjeEtdHFNYMtCpjNBm3h7
+
+## getAmount() function helps getting the private methods
+
+## You can chain methods if you use return $this in the method function
+
+$transaction->addTax(8)->applyDiscount(10); instead of $transaction->addTax(8);
+$transaction->applyDiscount(10);
