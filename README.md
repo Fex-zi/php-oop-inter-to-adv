@@ -3,5 +3,11 @@
 https://youtu.be/I_9-xWmkh28
 
 ---
+
 #### Course Playlist
+
 https://www.youtube.com/watch?v=sVbEyFZKgqk&list=PLr3d3QYzkw2xabQRUpcZ_IBk9W50M9pe-
+
+#### Docker Tutorial
+
+https://www.youtube.com/watch?v=31ieHmcTUOk&list=PL4cUxeGkcC9hxjeEtdHFNYMtCpjNBm3h7
