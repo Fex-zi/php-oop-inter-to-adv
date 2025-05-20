@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ify\class;
+namespace App\sum;
 
 class Test
 {

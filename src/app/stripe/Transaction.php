@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fexzi\boss;
+namespace App\stripe;
 
 class Transaction
 {

@@ -2,12 +2,23 @@
 
 declare(strict_types=1);
 
-require_once 'Transaction.php';
-require_once 'Test.php';
+// require_once '../app/stripe/Transaction.php';
+// require_once '../app/sum/Test.php';
 
-use Fexzi\boss\Transaction;
+// spl_autoload_register(function ($class) {
+//     // Convert namespace separators to directory separators
+//     $path = __DIR__ . '/../' . lcfirst(str_replace('\\', '/', $class)) . '.php';
+    
+//     if(file_exists($path)){
+//     require $path;
+//     }
+// });
 
-use Ify\class\Test;
+require __DIR__ .'/../vendor/autoload.php';
+
+use App\stripe\Transaction;
+
+use App\sum\Test;
 
 
 

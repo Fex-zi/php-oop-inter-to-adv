@@ -18,3 +18,9 @@ https://www.youtube.com/watch?v=31ieHmcTUOk&list=PL4cUxeGkcC9hxjeEtdHFNYMtCpjNBm
 
 $transaction->addTax(8)->applyDiscount(10); instead of $transaction->addTax(8);
 $transaction->applyDiscount(10);
+
+#### composer with Docker and using ramsey/uuid instead of spl_autoloader for classes
+
+https://www.youtube.com/watch?v=rqzYdHdyMH0&list=PLr3d3QYzkw2xabQRUpcZ_IBk9W50M9pe-&index=39
+
+## .gitignore vendor folder, but for this I won't;
