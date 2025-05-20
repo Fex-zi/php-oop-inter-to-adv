@@ -3,6 +3,13 @@
 declare(strict_types=1);
 
 require_once 'Transaction.php';
+require_once 'Test.php';
+
+use Fexzi\boss\Transaction;
+
+use Ify\class\Test;
+
+
 
 // $transaction = new Transaction(100, 'Transaction 1');
 
@@ -23,4 +30,10 @@ $transaction = (new Transaction(100, 'Transaction 1'))
     ->getAmount();
 
 
-var_dump($transaction);
+var_dump($transaction . "</br>");
+
+$ifyCash = (new Test(20, 'Let\'s test'))
+    ->sum(10)
+    ->cash();
+
+var_dump($ifyCash);
