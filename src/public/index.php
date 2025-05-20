@@ -20,6 +20,9 @@ use App\stripe\Transaction;
 
 use App\sum\Test;
 
+use App\Toaster;
+use App\ToasterPro;
+
 
 
 // $transaction = new Transaction(100, 'Transaction 1');
@@ -35,16 +38,38 @@ use App\sum\Test;
 
 // var_dump($transaction, $transaction2);
 
-$transaction = (new Transaction(100, 'Transaction 1'))
-    ->addTax(8)
-    ->applyDiscount(10)
-    ->getAmount();
+// $transaction = (new Transaction(100, 'Transaction 1'))
+//     ->addTax(8)
+//     ->applyDiscount(10)
+//     ->getAmount();
 
 
-var_dump($transaction . "</br>");
+//var_dump($transaction . "</br>");
 
-$ifyCash = (new Test(20, 'Let\'s test'))
-    ->sum(10)
-    ->cash();
+// $transaction = new Transaction();
+// //echo $transaction::STATUS_PAID;
+// echo Transaction::class . "</br>";
 
-var_dump($ifyCash);
+// $ifyCash = (new Test(20, 'Let\'s test'))
+//     ->sum(10)
+//     ->cash();
+
+// var_dump($ifyCash. "</br>");
+
+
+// $transaction = (new Transaction(100, 'Transaction 1'));
+
+// var_dump($transaction);
+
+ echo "</br>";
+
+ $toaster = new ToasterPro();
+
+ $toaster->addSlice('bread');
+ $toaster->addSlice('bread');
+ $toaster->addSlice('bread');
+ $toaster->addSlice('bread');
+ $toaster->addSlice('bread');
+ $toaster->toastBagel();
+
+ //$toaster = (new Toaster())->addSlice('bread')->toast();
