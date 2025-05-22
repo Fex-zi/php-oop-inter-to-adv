@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 // require_once '../app/stripe/Transaction.php';
@@ -21,7 +20,16 @@ use App\stripe\Transaction;
 use App\sum\Test;
 
 use App\Toaster;
-use App\ToasterPro;
+//use App\ToasterPro;
+
+
+
+$check = new App\coffee\CoffeeMaker;
+$check2 = new App\coffee\LatteMaker;
+
+echo $check->makeCoffee(). '</BR>';
+echo $check2->makeLatte(). '</BR>';
+echo $check2->makeCoffee();
 
 
 
@@ -63,13 +71,13 @@ use App\ToasterPro;
 
  echo "</br>";
 
- $toaster = new ToasterPro();
+//  $toaster = new App\ToasterPro();
 
- $toaster->addSlice('bread');
- $toaster->addSlice('bread');
- $toaster->addSlice('bread');
- $toaster->addSlice('bread');
- $toaster->addSlice('bread');
- $toaster->toastBagel();
+//  $toaster->addSlice('bread');
+//  $toaster->addSlice('bread');
+//  $toaster->addSlice('bread');
+//  $toaster->addSlice('bread');
+//  $toaster->addSlice('bread');
+//  $toaster->toastBagel();
 
- //$toaster = (new Toaster())->addSlice('bread')->toast();
+//  $toaster = (new Toaster())->addSlice('bread')->toast();
