@@ -26,10 +26,18 @@ use App\Toaster;
 
 $check = new App\coffee\CoffeeMaker;
 $check2 = new App\coffee\LatteMaker;
+$cap = new App\coffee\CappuccinoMaker;
+$all = new App\coffee\AllCoffeeMaker();
 
 echo $check->makeCoffee(). '</BR>';
 echo $check2->makeLatte(). '</BR>';
-echo $check2->makeCoffee();
+echo $check2->makeCoffee().'</br>';
+echo $cap->makeCappuccino().'</br>';
+
+echo $all->makeLatte(). '</br>';
+echo $all->makeCappuccino();
+
+
 
 
 

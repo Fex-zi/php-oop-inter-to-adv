@@ -5,7 +5,6 @@ namespace App\coffee;
 
 class CappuccinoMaker extends CoffeeMaker {
 
-    public function makeCappuccino(){
-        echo static::class . ' is making Cappuccino'. PHP_EOL;
-    }
+    use CappuccinoTrait;
+    
 }

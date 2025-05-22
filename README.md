@@ -23,3 +23,8 @@ docker compose up
 ## extends can update main method
 
 when using staic use :: and use static:: instead of self:: to overwrite methods for extends
+
+#Traits helps against duplication
+trait name { functions}
+
+call it as use traitname;

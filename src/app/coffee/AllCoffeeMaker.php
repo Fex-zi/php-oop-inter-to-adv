@@ -5,4 +5,7 @@ namespace App\coffee;
 
 class AllCoffeeMaker extends CoffeeMaker{
 
+    use LatteTrait;
+    use CappuccinoTrait;
+
 }
