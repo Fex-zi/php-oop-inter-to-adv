@@ -9,15 +9,6 @@ use App\Router;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-// spl_autoload_register(function ($class) {
-//     // Convert namespace separators to directory separators
-//     $path = __DIR__ . '/../' . lcfirst(str_replace('\\', '/', $class)) . '.php';
-    
-//     if(file_exists($path)){
-//     require $path;
-//     }
-// });
-
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
